@@ -1,0 +1,1419 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c0b0a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>OBENTO · Carta · Número de pedidos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Shippori+Mincho:wght@400;500;600;700;800&amp;family=Zen+Kaku+Gothic+New:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ SPLASH ============ -->
+  <section id="view-splash" class="view active seigaiha">
+    <div class="splash-logo-wrap">
+      <img src="images/logo-obento.png" alt="OBENTO · Japanese Food" class="splash-logo">
+    </div>
+    <p class="splash-tagline">
+      <span class="st-line"></span>
+      Para recoger · Para llevar
+      <span class="st-line right"></span>
+    </p>
+    <p class="splash-jp">美味しい</p>
+    <button class="btn-primary btn-primary-splash" id="btn-ver-carta">Ver la carta</button>
+    <a class="btn-call" id="btn-call-splash" href="tel:613927596">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-6-3-2 2c-2.5-1.2-4.3-3-5.5-5.5l2-2-3-6z"></path></svg>
+      <span>
+        <span class="bc-label">Número de pedidos</span>
+        <span id="call-splash-num"> 613 927 596</span>
+      </span>
+    </a>
+    <div style="display:flex; gap:22px; margin-top:18px;">
+      <button class="btn-link" id="btn-ver-about-splash">Conócenos</button>
+      <button class="btn-link" id="btn-ver-location-splash">Ubicación</button>
+    </div>
+  </section>
+
+  <!-- ============ CARTA ============ -->
+  <section id="view-menu" class="view">
+    <div class="menu-scroll" id="menu-scroll">
+      <div class="menu-header">
+        <div class="header-row">
+          <button class="icon-btn" id="btn-menu-back" aria-label="Volver">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"></path></svg>
+          </button>
+          <div class="wordmark">
+            <div class="brand-title small">OBENTO</div>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="icon-btn" id="btn-open-about" aria-label="Conócenos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.8 8.6c0 5-8.8 10.4-8.8 10.4S3.2 13.6 3.2 8.6a4.8 4.8 0 0 1 8.8-2.7 4.8 4.8 0 0 1 8.8 2.7z"></path></svg>
+            </button>
+            <button class="icon-btn" id="btn-open-location" aria-label="Ubicación">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11z"></path><circle cx="12" cy="10" r="2.3"></circle></svg>
+            </button>
+            <button class="icon-btn" id="btn-allergen-info" aria-label="Alérgenos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7.5v.01"></path></svg>
+            </button>
+          </div>
+        </div>
+        <div class="pills-row" id="pills-row"><button class="pill active" data-cat="entrantes">Entrantes</button><button class="pill" data-cat="sushi">Sushi</button><button class="pill" data-cat="calientes">Calientes</button><button class="pill" data-cat="postres">Postres</button><button class="pill" data-cat="bebidas">Bebidas</button></div>
+      </div>
+    <div class="cat-title-slide" id="cat-title-entrantes" data-cat="entrantes">
+      <div class="eyebrow">Carta OBENTO</div>
+      <h2>Entrantes</h2>
+      <div class="divider-orn"></div>
+      <div class="count">8 platos · desliza para descubrir</div>
+    </div><div class="dish-slide" data-cat="entrantes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/ensaladawakame.jpg" alt="Ensalada wakame" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Ensalada wakame</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">6,90€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Alga wakame marinada en salsa aojiso, salmón y toque de sésamo.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Sésamo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7.5" cy="9" rx="2.1" ry="1.1" transform="rotate(-25 7.5 9)"></ellipse><ellipse cx="13.5" cy="6.5" rx="2.1" ry="1.1" transform="rotate(15 13.5 6.5)"></ellipse><ellipse cx="17" cy="12" rx="2.1" ry="1.1" transform="rotate(-10 17 12)"></ellipse><ellipse cx="9" cy="15.5" rx="2.1" ry="1.1" transform="rotate(25 9 15.5)"></ellipse><ellipse cx="15" cy="17.5" rx="2.1" ry="1.1" transform="rotate(-20 15 17.5)"></ellipse></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="entrantes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/ebifry.jpg" alt="Ebi Fry" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Ebi Fry</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">5,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Langostinos empanados crujientes con salsa Sweetchili verde (3und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Crustáceos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17c-1.5-4 0-10 6-11 4-.7 8 2 8 6 0 2-1.3 3.2-3 3.2"></path><path d="M17 11.5l3-1.2M17.5 14l3 .8"></path><path d="M6.5 16.5l-2.3 1M8 18.5l-1.5 2"></path><circle cx="7" cy="6.8" r="1"></circle></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="entrantes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/edamame.jpg" alt="Edamame" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Edamame</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">4,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Vainas de soja salteadas con aceite de humo y toque de shichimi y sal en escamas.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="entrantes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/gyozaspollo.jpg" alt="Gyozas de pollo (4und)" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Gyozas de pollo (4und)</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">4,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Empanadillas japonesas a la plancha, rellenas de pollo.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="entrantes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/gyozasverdura.jpg" alt="Gyozas de verdura (4 und)" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Gyozas de verdura (4 und)</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">4,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Empanadillas japonesas a la plancha, relleno vegetal.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="entrantes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/gyozaslangostino.jpg" alt="Gyozas de langostino" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Gyozas de langostino</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">5,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Empanadillas japonesas a la plancha, relleno de langostino (4 und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div><div class="allergen-badge" title="Crustáceos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17c-1.5-4 0-10 6-11 4-.7 8 2 8 6 0 2-1.3 3.2-3 3.2"></path><path d="M17 11.5l3-1.2M17.5 14l3 .8"></path><path d="M6.5 16.5l-2.3 1M8 18.5l-1.5 2"></path><circle cx="7" cy="6.8" r="1"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="entrantes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/samosas.jpg" alt="Samosas" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Samosas</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">6,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Deliciosos crujientes de hojaldre con relleno de pollo al curry y nuestra mayo buldak miel y toque de sésamo (3 und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Sésamo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7.5" cy="9" rx="2.1" ry="1.1" transform="rotate(-25 7.5 9)"></ellipse><ellipse cx="13.5" cy="6.5" rx="2.1" ry="1.1" transform="rotate(15 13.5 6.5)"></ellipse><ellipse cx="17" cy="12" rx="2.1" ry="1.1" transform="rotate(-10 17 12)"></ellipse><ellipse cx="9" cy="15.5" rx="2.1" ry="1.1" transform="rotate(25 9 15.5)"></ellipse><ellipse cx="15" cy="17.5" rx="2.1" ry="1.1" transform="rotate(-20 15 17.5)"></ellipse></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="entrantes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/takoyaki.jpg" alt="Takoyaki" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Takoyaki</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">4,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Bolitas de pulpo rebozadas, salsa takoyaki, katsuobushi y hojuelas de bonito (3 und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div><div class="allergen-badge" title="Moluscos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a8.5 8.5 0 1 1 8.5-8.5"></path><path d="M12 21a5.3 5.3 0 1 1 5.3-5.3"></path><path d="M12 21a2.2 2.2 0 1 1 2.2-2.2"></path></svg></div><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="cat-title-slide" id="cat-title-sushi" data-cat="sushi">
+      <div class="eyebrow">Carta OBENTO</div>
+      <h2>Sushi</h2>
+      <div class="divider-orn"></div>
+      <div class="count">25 platos · desliza para descubrir</div>
+    </div><div class="subcat-title-slide" data-cat="sushi"><h3>Nigiri</h3><div class="divider-orn small"></div></div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/nigiriatun.jpg" alt="Nigiri de atún" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Nigiri de atún</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">6,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Atún Rojo Ricardo Fuentes (2und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/nigiriatunfoie.jpg" alt="Nigiri de atún con foie" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Nigiri de atún con foie</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">7,80€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Atún Rojo coronado con foie, sal marinada y punto de teriyaki (2und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/nigirisalmon.jpg" alt="Nigiri de salmón" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Nigiri de salmón</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">5,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Salmón (2und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/nigirisalmonf.jpg" alt="Nigiri de salmón flambeado" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Nigiri de salmón flambeado</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">6,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Salmón sellado al soplete, con salsa kimchi y azúcar moreno (2und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/nigirichutoro.jpg" alt="Nigiri de chutoro" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Nigiri de chutoro</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">10,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Atún sellado al soplete, toque de sal en escamas, pimienta negra y cebolleta (2und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/nigirivieira.jpg" alt="Nigiri de vieira" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Nigiri de vieira</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">9,90€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Vieira sellada con soplete, mayo kimchi, sal en escamas, shichimi y toque de lima (2und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Moluscos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a8.5 8.5 0 1 1 8.5-8.5"></path><path d="M12 21a5.3 5.3 0 1 1 5.3-5.3"></path><path d="M12 21a2.2 2.2 0 1 1 2.2-2.2"></path></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/nigirianguila.jpg" alt="Nigiri de anguila" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Nigiri de anguila</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">7,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Anguila glaseada en salsa teriyaki y toque de cebolleta finamente cortada (2und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/nigirihamachi.jpg" alt="Nigiri de hamachi" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Nigiri de hamachi</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">8,90€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Pez limón (hamachi) (2und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/atuntoro.jpg" alt="Nigiri de atún toro con trufa" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Nigiri de atún toro con trufa</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">10,90€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Mayo trufada, cebolleta finamente cortada y atún toro rojo (2und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="subcat-title-slide" data-cat="sushi"><h3>Uramaki</h3><div class="divider-orn small"></div></div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/rolloatun.jpg" alt="Jōnetsu Tuna" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Jōnetsu Tuna</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">14,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Arroz con sésamo kimchi. Queso crema, aguacate, cebollino y pepino holandés con cobertura de atún, foie flambeado con punto de teriyaki. (8 uds)</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Lácteos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div><div class="allergen-badge" title="Sésamo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7.5" cy="9" rx="2.1" ry="1.1" transform="rotate(-25 7.5 9)"></ellipse><ellipse cx="13.5" cy="6.5" rx="2.1" ry="1.1" transform="rotate(15 13.5 6.5)"></ellipse><ellipse cx="17" cy="12" rx="2.1" ry="1.1" transform="rotate(-10 17 12)"></ellipse><ellipse cx="9" cy="15.5" rx="2.1" ry="1.1" transform="rotate(25 9 15.5)"></ellipse><ellipse cx="15" cy="17.5" rx="2.1" ry="1.1" transform="rotate(-20 15 17.5)"></ellipse></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/uramakisalmon.jpg" alt="Sakura Roll" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Sakura Roll</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">12,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Queso crema, aguacate, cebollino y pepino holandés con cobertura de salmón flambeado, acabado con mayo kimchi y punto de teriyaki. (8 uds)</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Lácteos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/uramakipollo.jpg" alt="Chicken roll" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Chicken roll</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">11,50€</div>
+          </div>
+        </div>
+        
+        <div class="portion-row" data-dish="u3" data-kind="porcion">
+          <button class="portion-pill active" data-cant="8">8 uds</button>
+        </div>
+        
+        <p class="dish-desc">Pollo karaage, queso crema, cebollino, cobertura de aguacate y nuestra salsa acebichada (8 uds).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div><div class="allergen-badge" title="Lácteos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/rollovegetal.jpg" alt="Aurora Roll (Vegetal)" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Aurora Roll (Vegetal)</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">10,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Uramaki de micro mezclum, pepino y mango, guacamole trufado, punto de salsa Aojiso y coronado con cebolleta finamente cortada. (8 uds)</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/rolloblack.jpg" alt="Black Dragon" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Black Dragon</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">15,20€</div>
+          </div>
+        </div>
+        
+        <div class="portion-row" data-dish="u5" data-kind="porcion">
+          <button class="portion-pill active" data-cant="8">8 uds</button>
+        </div>
+        
+        <p class="dish-desc">Espárrago, cebollino, gamba tempurizada, cobertura de atún, mayo buldak miel, decorado con boniato crujiente.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div><div class="allergen-badge" title="Crustáceos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17c-1.5-4 0-10 6-11 4-.7 8 2 8 6 0 2-1.3 3.2-3 3.2"></path><path d="M17 11.5l3-1.2M17.5 14l3 .8"></path><path d="M6.5 16.5l-2.3 1M8 18.5l-1.5 2"></path><circle cx="7" cy="6.8" r="1"></circle></svg></div><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/uramakicangrejo.jpg" alt="Shinigami crab" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Shinigami crab</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">11,50€</div>
+          </div>
+        </div>
+        
+        <div class="portion-row" data-dish="u6" data-kind="porcion">
+          <button class="portion-pill active" data-cant="8">8 uds</button>
+        </div>
+        
+        <p class="dish-desc">Arroz negro, brotes de soja, mango, cangrejo real, cobertura de lubina y salsa spicy mango.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Crustáceos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17c-1.5-4 0-10 6-11 4-.7 8 2 8 6 0 2-1.3 3.2-3 3.2"></path><path d="M17 11.5l3-1.2M17.5 14l3 .8"></path><path d="M6.5 16.5l-2.3 1M8 18.5l-1.5 2"></path><circle cx="7" cy="6.8" r="1"></circle></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/rollosalmon1.jpg" alt="Rollo Tartar de salmón" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Rollo Tartar de salmón</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">11,30€</div>
+          </div>
+        </div>
+        
+        <div class="portion-row" data-dish="u7" data-kind="porcion">
+          <button class="portion-pill active" data-cant="8">8 uds</button>
+        </div>
+        
+        <p class="dish-desc">Aguacate, queso crema, cebollino y pepino, con tartar de salmón y salsa Aojiso.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Lácteos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/rolloatun1.jpg" alt="Rollo Tartar de atún" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Rollo Tartar de atún</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">13,80€</div>
+          </div>
+        </div>
+        
+        <div class="portion-row" data-dish="u8" data-kind="porcion">
+          <button class="portion-pill active" data-cant="8">8 uds</button>
+        </div>
+        
+        <p class="dish-desc">Aguacate, queso crema, cebollino y pepino, con tartar de atún y mayo kimchi.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Lácteos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/rollolubina.jpg" alt="Rollo Tartar de lubina" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Rollo Tartar de lubina</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">11,90€</div>
+          </div>
+        </div>
+        
+        <div class="portion-row" data-dish="u9" data-kind="porcion">
+          <button class="portion-pill active" data-cant="8">8 uds</button>
+        </div>
+        
+        <p class="dish-desc">Aguacate, queso crema, cebollino y pepino, con tartar de lubina y salsa acebichada.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Lácteos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="subcat-title-slide" data-cat="sushi"><h3>Futomaki</h3><div class="divider-orn small"></div></div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/futomaki.jpg" alt="Futomaki de salmón" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Futomaki de salmón</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">9,90€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Relleno de salmón, queso crema y salsa aojiso (8 und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div><div class="allergen-badge" title="Lácteos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/rollogamba.jpg" alt="Futomaki de gamba trufada" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Futomaki de gamba trufada</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">12,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Gamba en tempura, ikura, cebollino y mayonesa trufada (12 und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Crustáceos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17c-1.5-4 0-10 6-11 4-.7 8 2 8 6 0 2-1.3 3.2-3 3.2"></path><path d="M17 11.5l3-1.2M17.5 14l3 .8"></path><path d="M6.5 16.5l-2.3 1M8 18.5l-1.5 2"></path><circle cx="7" cy="6.8" r="1"></circle></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/futokara.jpg" alt="Futomaki karaage" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Futomaki karaage</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">10,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Relleno de pollo karaage rebozado, mango, acompañado de mayo buldak miel (12 und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Huevo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="subcat-title-slide" data-cat="sushi"><h3>Maki</h3><div class="divider-orn small"></div></div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/maki2.jpg" alt="Maki de salmón" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Maki de salmón</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">6,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Salmón (8 und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/makichu.jpg" alt="Maki de chutoro" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Maki de chutoro</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">10,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Ventresca de atún rojo Ricardo Fuentes (8 und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/makiatun.jpg" alt="Maki de atún" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Maki de atún</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">7,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Atún fresco (8 und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Pescado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="sushi">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/maki4.jpg" alt="Maki de aguacate" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Maki de aguacate</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">5,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Aguacate (8 und).</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><span class="allergen-none">Sin alérgenos destacados</span></div>
+      </div>
+    </div>
+  </div><div class="cat-title-slide" id="cat-title-calientes" data-cat="calientes">
+      <div class="eyebrow">Carta OBENTO</div>
+      <h2>Calientes</h2>
+      <div class="divider-orn"></div>
+      <div class="count">5 platos · desliza para descubrir</div>
+    </div><div class="dish-slide" data-cat="calientes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/arrozternera.jpg" alt="Arroz con ternera" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Arroz con ternera</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">12,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Arroz salteado con ternera, zanahoria, pimiento verde, pimiento rojo, cebolla, espárrago y pepino.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="calientes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/arrozpollo.jpg" alt="Arroz con pollo" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Arroz con pollo</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">11,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Arroz salteado con pollo, zanahoria, pimiento verde, pimiento rojo, cebolla, espárrago y pepino.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="calientes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/yakisobalangostino.jpg" alt="Yakisoba de langostino" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Yakisoba de langostino</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">13,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="options-text"><span class="options-label">A elegir:</span> Fideos de trigo · Fideos de arroz (sin gluten)</p>
+        <p class="dish-desc">Fideos salteados con langostino, col, aceite de sésamo, pepino y soja.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Crustáceos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17c-1.5-4 0-10 6-11 4-.7 8 2 8 6 0 2-1.3 3.2-3 3.2"></path><path d="M17 11.5l3-1.2M17.5 14l3 .8"></path><path d="M6.5 16.5l-2.3 1M8 18.5l-1.5 2"></path><circle cx="7" cy="6.8" r="1"></circle></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div><div class="allergen-badge" title="Sésamo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7.5" cy="9" rx="2.1" ry="1.1" transform="rotate(-25 7.5 9)"></ellipse><ellipse cx="13.5" cy="6.5" rx="2.1" ry="1.1" transform="rotate(15 13.5 6.5)"></ellipse><ellipse cx="17" cy="12" rx="2.1" ry="1.1" transform="rotate(-10 17 12)"></ellipse><ellipse cx="9" cy="15.5" rx="2.1" ry="1.1" transform="rotate(25 9 15.5)"></ellipse><ellipse cx="15" cy="17.5" rx="2.1" ry="1.1" transform="rotate(-20 15 17.5)"></ellipse></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="calientes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/yakisobaternera.jpg" alt="Yakisoba de ternera" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Yakisoba de ternera</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">12,90€</div>
+          </div>
+        </div>
+        
+        
+        <p class="options-text"><span class="options-label">A elegir:</span> Fideos de trigo · Fideos de arroz (sin gluten)</p>
+        <p class="dish-desc">Fideos salteados con ternera, col, aceite de sésamo, pepino y soja.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div><div class="allergen-badge" title="Sésamo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7.5" cy="9" rx="2.1" ry="1.1" transform="rotate(-25 7.5 9)"></ellipse><ellipse cx="13.5" cy="6.5" rx="2.1" ry="1.1" transform="rotate(15 13.5 6.5)"></ellipse><ellipse cx="17" cy="12" rx="2.1" ry="1.1" transform="rotate(-10 17 12)"></ellipse><ellipse cx="9" cy="15.5" rx="2.1" ry="1.1" transform="rotate(25 9 15.5)"></ellipse><ellipse cx="15" cy="17.5" rx="2.1" ry="1.1" transform="rotate(-20 15 17.5)"></ellipse></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="calientes">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/yakisobapollo.jpg" alt="Yakisoba de pollo" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Yakisoba de pollo</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">11,90€</div>
+          </div>
+        </div>
+        
+        
+        <p class="options-text"><span class="options-label">A elegir:</span> Fideos de trigo · Fideos de arroz (sin gluten)</p>
+        <p class="dish-desc">Fideos salteados con pollo, col, aceite de sésamo, pepino y soja.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div><div class="allergen-badge" title="Soja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div><div class="allergen-badge" title="Sésamo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7.5" cy="9" rx="2.1" ry="1.1" transform="rotate(-25 7.5 9)"></ellipse><ellipse cx="13.5" cy="6.5" rx="2.1" ry="1.1" transform="rotate(15 13.5 6.5)"></ellipse><ellipse cx="17" cy="12" rx="2.1" ry="1.1" transform="rotate(-10 17 12)"></ellipse><ellipse cx="9" cy="15.5" rx="2.1" ry="1.1" transform="rotate(25 9 15.5)"></ellipse><ellipse cx="15" cy="17.5" rx="2.1" ry="1.1" transform="rotate(-20 15 17.5)"></ellipse></svg></div></div>
+      </div>
+    </div>
+  </div><div class="cat-title-slide" id="cat-title-postres" data-cat="postres">
+      <div class="eyebrow">Carta OBENTO</div>
+      <h2>Postres</h2>
+      <div class="divider-orn"></div>
+      <div class="count">3 platos · desliza para descubrir</div>
+    </div><div class="dish-slide" data-cat="postres">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/mochifresa.jpg" alt="Mochi de tarta de queso" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Mochi de tarta de queso</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">4,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Masa de arroz con helado de tarta de queso.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Lácteos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="postres">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/mochimango.jpg" alt="Mochi de mango" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Mochi de mango</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">4,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Masa de arroz de Fruta de la pasión relleno de helado de mango.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Lácteos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="postres">
+    
+    <div class="dish-media-wrap">
+      <div class="dish-media">
+        <img src="images/mochichocolate.jpg" alt="Mochi de chocolate" loading="lazy">
+      </div>
+    </div>
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Mochi de chocolate</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">4,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc">Masa de arroz relleno de helado de chocolate.</p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Lácteos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="cat-title-slide" id="cat-title-bebidas" data-cat="bebidas">
+      <div class="eyebrow">Carta OBENTO</div>
+      <h2>Bebidas</h2>
+      <div class="divider-orn"></div>
+      <div class="count">8 platos · desliza para descubrir</div>
+    </div><div class="dish-slide" data-cat="bebidas">
+    
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Coca-Cola</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">2,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc"></p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><span class="allergen-none">Sin alérgenos destacados</span></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="bebidas">
+    
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Coca-Cola Zero</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">2,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc"></p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><span class="allergen-none">Sin alérgenos destacados</span></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="bebidas">
+    
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Aquarius</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">2,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc"></p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><span class="allergen-none">Sin alérgenos destacados</span></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="bebidas">
+    
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Fanta Naranja</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">2,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc"></p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><span class="allergen-none">Sin alérgenos destacados</span></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="bebidas">
+    
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Nestea</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">2,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc"></p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><span class="allergen-none">Sin alérgenos destacados</span></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="bebidas">
+    
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Cerveza Asahi</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">3,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc"></p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="bebidas">
+    
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Cerveza Kirin</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">3,50€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc"></p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><div class="allergen-badge" title="Gluten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div></div>
+      </div>
+    </div>
+  </div><div class="dish-slide" data-cat="bebidas">
+    
+    <div class="dish-info">
+      <div class="dish-top">
+        <div class="dish-head">
+          <div class="dish-head-text">
+            <h3 class="dish-name">Agua pequeña</h3>
+          </div>
+          <div class="dish-head-cta">
+            <div class="dish-price">1,20€</div>
+          </div>
+        </div>
+        
+        
+        <p class="dish-desc"></p>
+        <div class="dish-rule"></div>
+        <div class="allergen-row"><span class="allergen-none">Sin alérgenos destacados</span></div>
+      </div>
+    </div>
+  </div></div>
+
+    <a class="call-bar" id="call-bar" href="tel:613927596">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-6-3-2 2c-2.5-1.2-4.3-3-5.5-5.5l2-2-3-6z"></path></svg>
+      <span>Número de pedidos<b id="call-bar-num"> 613 927 596</b></span>
+    </a>
+  </section>
+
+  <!-- ============ CONÓCENOS ============ -->
+  <section id="view-about" class="view">
+    <div class="subview-header">
+      <button class="back-btn" id="btn-about-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"></path></svg>
+      </button>
+      <h2>Conócenos</h2>
+    </div>
+    <div class="subview-body" style="padding-bottom:40px;">
+      <div class="about-hero seigaiha">
+        <div class="brand-block">
+          <div class="brand-title">OBENTO</div>
+          <p class="splash-subtitle" style="margin-bottom:0;">Japanese Food</p>
+        </div>
+      </div>
+      <p class="about-lead" id="about-lead">En OBENTO elaboramos cada pieza a mano, al momento, con los mejores ingredientes seleccionados y con plena pasión. Cocina de calidad, sushi hecho al momento, cortado al punto para que disfrutes cada bocado.</p>
+      <div class="value-list" id="value-list">
+    <div class="value-item">
+      <div class="value-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c4-5 10-6 14-2 2 2 3 3 4 2-1 3-3 5-4 2-4 4-10 3-14-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div>
+      <div class="value-text">
+        <div class="v-title">Cuidado y calidad del pescado</div>
+        <div class="v-desc">Seleccionamos nuestro pescado cuidadosamente y seguimos un proceso de conservación y congelación adecuado para garantizar su seguridad y mantener al máximo su calidad, sabor y textura.</div>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c3-4 8-5 11-2 1.5 1.5 2.5 2 3.5 1.5-1 2-2 3.5-3.5 1.5-3 3-8 2-11-2z"></path></svg></div>
+      <div class="value-text">
+        <div class="v-title">Atún rojo, de Ricardo Fuentes</div>
+        <div class="v-desc">Trabajamos con Ricardo Fuentes para nuestro atún rojo, una garantía de origen y de la mejor calidad pieza a pieza.</div>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12c0-4 2-7 5-7s5 3 5 7"></path><path d="M4 12h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path></svg></div>
+      <div class="value-text">
+        <div class="v-title">Salmón noruego y materia prima seleccionada</div>
+        <div class="v-desc">Usamos salmón noruego y otros pescados de alta calidad, con un corte perfecto para disfrutar de cada bocado.</div>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12c0-4 2-7 5-7s5 3 5 7"></path><path d="M4 12h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path></svg></div>
+      <div class="value-text">
+        <div class="v-title">Hecho a mano, al momento</div>
+        <div class="v-desc">Cada nigiri y cada maki se prepara cuando entra tu pedido, no antes.</div>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="1.4"></circle><circle cx="13" cy="7" r="1.4"></circle><circle cx="16" cy="11" r="1.4"></circle><circle cx="10" cy="13" r="1.4"></circle><circle cx="14" cy="15" r="1.4"></circle></svg></div>
+      <div class="value-text">
+        <div class="v-title">Arroz elaborado en casa</div>
+        <div class="v-desc">Cocido y aderezado siguiendo la técnica tradicional, punto clave de un buen sushi.</div>
+      </div>
+    </div></div>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIÓN ============ -->
+  <section id="view-location" class="view">
+    <div class="subview-header">
+      <button class="back-btn" id="btn-location-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"></path></svg>
+      </button>
+      <h2>Ubicación</h2>
+    </div>
+    <div class="subview-body" style="padding-bottom:40px;">
+      <div class="section-label" style="margin-top:6px;">Cómo pedir</div>
+      <p class="about-lead" style="margin-bottom:22px;">Esta carta es solo para que veas los platos. Para hacer tu pedido, llámanos por teléfono — recogida en tienda o entrega a domicilio en un radio de 5 km, con un pedido mínimo de 25€.</p>
+
+      <a class="btn-secondary-outline btn-block" id="btn-call-location" href="tel:613927596" style="text-align:center; display:block; text-decoration:none; margin-bottom:24px; color:var(--c-gold); border-color:var(--c-gold);">Llamar ahora</a>
+
+      <div class="section-label">Dónde estamos</div>
+      <div class="info-card">
+        <div class="info-row">
+          <div class="info-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11z"></path><circle cx="12" cy="10" r="2.3"></circle></svg>
+          </div>
+          <div>
+            <div class="info-title" id="about-address">C. Amargura, 3</div>
+            <div class="info-sub" id="about-city">30830 La Ñora, Murcia</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+          </div>
+          <div>
+            <div class="info-title" id="about-hours-1">Recoger en tienda: miércoles a domingo</div>
+            <div class="info-sub" id="about-hours-2">18:00–23:30</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h13l-3-3m3 3l-3 3"></path><path d="M16 6h2.5L21 12l-2.5 6H16"></path></svg>
+          </div>
+          <div>
+            <div class="info-title">Para llevar: miércoles a domingo</div>
+            <div class="info-sub">20:00–23:30</div>
+          </div>
+        </div>
+        <div class="info-row info-row-phone">
+          <div class="info-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-6-3-2 2c-2.5-1.2-4.3-3-5.5-5.5l2-2-3-6z"></path></svg>
+          </div>
+          <div>
+            <div class="info-title" id="about-phone"> 613 927 596</div>
+            <div class="info-sub">Llámanos para pedir</div>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn-secondary-outline btn-block" style="margin-top:16px; text-align:center; display:block; text-decoration:none;" id="about-maps-link" href="https://maps.google.com/?q=Obento+Japanese+Food" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </section>
+
+  <!-- ============ MODAL ALÉRGENOS ============ -->
+  <div class="modal-overlay" id="allergen-modal">
+    <div class="modal-sheet">
+      <h3>Alérgenos</h3>
+      <div id="legend-list">
+  <div class="legend-item">
+    <div class="allergen-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M12 6.5l3-2M12 6.5l-3-2"></path><path d="M12 10l3-2M12 10l-3-2"></path><path d="M12 13.5l3-2M12 13.5l-3-2"></path><path d="M12 17l2.4-1.6M12 17l-2.4-1.6"></path></svg></div>
+    <span>Gluten</span>
+  </div>
+  <div class="legend-item">
+    <div class="allergen-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5c-3 3-3.5 8.5-.5 11.5s8.5 2.5 11.5-.5"></path><circle cx="9.6" cy="9" r="1.5"></circle><circle cx="12.8" cy="12" r="1.5"></circle><circle cx="16" cy="15.2" r="1.5"></circle></svg></div>
+    <span>Soja</span>
+  </div>
+  <div class="legend-item">
+    <div class="allergen-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-5 11-6.5 15-2.5 2 2 3 2.5 4 2.5-1 1.5-2 2-4 2-4 4-11 2.5-15-2z"></path><circle cx="7.2" cy="11.2" r="0.8" fill="currentColor" stroke="none"></circle></svg></div>
+    <span>Pescado</span>
+  </div>
+  <div class="legend-item">
+    <div class="allergen-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17c-1.5-4 0-10 6-11 4-.7 8 2 8 6 0 2-1.3 3.2-3 3.2"></path><path d="M17 11.5l3-1.2M17.5 14l3 .8"></path><path d="M6.5 16.5l-2.3 1M8 18.5l-1.5 2"></path><circle cx="7" cy="6.8" r="1"></circle></svg></div>
+    <span>Crustáceos</span>
+  </div>
+  <div class="legend-item">
+    <div class="allergen-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4-6.5 9-6.5 12.5A6.5 6.5 0 0 0 12 22a6.5 6.5 0 0 0 6.5-6.5C18.5 12 16 7 12 3z"></path></svg></div>
+    <span>Huevo</span>
+  </div>
+  <div class="legend-item">
+    <div class="allergen-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8c0-1.6 1.3-3 3-3s3 1.4 3 3"></path><path d="M7.5 8h9c0 5.5-2 9.5-4.5 12.5C9.5 17.5 7.5 13.5 7.5 8z"></path><path d="M12 8v6"></path></svg></div>
+    <span>Frutos de cáscara</span>
+  </div>
+  <div class="legend-item">
+    <div class="allergen-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5l1 3.2V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V6.2L9.5 3z"></path><path d="M8.5 6.2h7"></path></svg></div>
+    <span>Lácteos</span>
+  </div>
+  <div class="legend-item">
+    <div class="allergen-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7.5" cy="9" rx="2.1" ry="1.1" transform="rotate(-25 7.5 9)"></ellipse><ellipse cx="13.5" cy="6.5" rx="2.1" ry="1.1" transform="rotate(15 13.5 6.5)"></ellipse><ellipse cx="17" cy="12" rx="2.1" ry="1.1" transform="rotate(-10 17 12)"></ellipse><ellipse cx="9" cy="15.5" rx="2.1" ry="1.1" transform="rotate(25 9 15.5)"></ellipse><ellipse cx="15" cy="17.5" rx="2.1" ry="1.1" transform="rotate(-20 15 17.5)"></ellipse></svg></div>
+    <span>Sésamo</span>
+  </div>
+  <div class="legend-item">
+    <div class="allergen-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a8.5 8.5 0 1 1 8.5-8.5"></path><path d="M12 21a5.3 5.3 0 1 1 5.3-5.3"></path><path d="M12 21a2.2 2.2 0 1 1 2.2-2.2"></path></svg></div>
+    <span>Moluscos</span>
+  </div></div>
+      <button class="btn-primary btn-block modal-close" id="btn-close-modal">Cerrar</button>
+    </div>
+  </div>
+
+</div>
+<script src="js/menu-data.js"></script>
+<script src="js/app.js"></script>
+
+
+</body></html>
