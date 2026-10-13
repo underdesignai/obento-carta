@@ -1,6 +1,5 @@
 .git
 .gitignore
 Dockerfile
-default.conf
 README.md
 TU_URL.png
