@@ -79,46 +79,70 @@ function renderDishSlide(cat, dish){
 }
 
 function buildMenu(){
-  CATEGORIES.forEach(cat=>{
-    const pill = document.createElement('button');
-    pill.className = 'pill';
-    pill.textContent = cat.label;
-    pill.dataset.cat = cat.slug;
-    pill.addEventListener('click', ()=>{
-      document.getElementById('cat-title-'+cat.slug).scrollIntoView({behavior:'smooth', block:'start'});
-    });
-    pillsRow.appendChild(pill);
+  // 1. Configurar navegación de las anclas por delegación de eventos en pillsRow
+  pillsRow.addEventListener('click', (e)=>{
+    const pill = e.target.closest('.pill');
+    if(!pill) return;
+    e.preventDefault();
+    const cat = pill.dataset.cat;
+    if(!cat) return;
 
-    const items = MENU.filter(m=>m.cat===cat.slug);
-    const titleSlide = document.createElement('div');
-    titleSlide.className = 'cat-title-slide';
-    titleSlide.id = 'cat-title-'+cat.slug;
-    titleSlide.dataset.cat = cat.slug;
-    titleSlide.innerHTML = `
-      <div class="eyebrow">Carta OBENTO</div>
-      <h2>${cat.label}</h2>
-      <div class="divider-orn"></div>
-      <div class="count">${items.length} platos · desliza para descubrir</div>
-    `;
-    menuScroll.appendChild(titleSlide);
-
-    if(cat.slug === 'sushi' && Array.isArray(SUSHI_SUBCATEGORIES)){
-      SUSHI_SUBCATEGORIES.forEach(sub=>{
-        const subItems = items.filter(m=>m.sub===sub.slug);
-        if(!subItems.length) return;
-        const subSlide = document.createElement('div');
-        subSlide.className = 'subcat-title-slide';
-        subSlide.dataset.cat = cat.slug;
-        subSlide.innerHTML = `<h3>${sub.label}</h3><div class="divider-orn small"></div>`;
-        menuScroll.appendChild(subSlide);
-        subItems.forEach(dish=> menuScroll.appendChild(renderDishSlide(cat, dish)));
-      });
-    } else {
-      items.forEach(dish=> menuScroll.appendChild(renderDishSlide(cat, dish)));
+    const target = document.getElementById('cat-title-' + cat);
+    if(target){
+      const header = document.querySelector('.menu-header');
+      const headerH = header ? header.offsetHeight : 104;
+      const targetTop = target.offsetTop - headerH;
+      menuScroll.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
     }
+
+    pillsRow.querySelectorAll('.pill').forEach(p => p.classList.toggle('active', p === pill));
+    pill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
   });
 
-  pillsRow.querySelector('.pill').classList.add('active');
+  // 2. Solo generar platos si menuScroll está vacío (no pre-renderizado)
+  const hasExistingSlides = menuScroll.querySelector('.cat-title-slide');
+  if(!hasExistingSlides){
+    pillsRow.innerHTML = '';
+    CATEGORIES.forEach(cat=>{
+      const pill = document.createElement('button');
+      pill.className = 'pill';
+      pill.textContent = cat.label;
+      pill.dataset.cat = cat.slug;
+      pillsRow.appendChild(pill);
+
+      const items = MENU.filter(m=>m.cat===cat.slug);
+      const titleSlide = document.createElement('div');
+      titleSlide.className = 'cat-title-slide';
+      titleSlide.id = 'cat-title-'+cat.slug;
+      titleSlide.dataset.cat = cat.slug;
+      titleSlide.innerHTML = `
+        <div class="eyebrow">Carta OBENTO</div>
+        <h2>${cat.label}</h2>
+        <div class="divider-orn"></div>
+        <div class="count">${items.length} platos · desliza para descubrir</div>
+      `;
+      menuScroll.appendChild(titleSlide);
+
+      if(cat.slug === 'sushi' && Array.isArray(SUSHI_SUBCATEGORIES)){
+        SUSHI_SUBCATEGORIES.forEach(sub=>{
+          const subItems = items.filter(m=>m.sub===sub.slug);
+          if(!subItems.length) return;
+          const subSlide = document.createElement('div');
+          subSlide.className = 'subcat-title-slide';
+          subSlide.dataset.cat = cat.slug;
+          subSlide.innerHTML = `<h3>${sub.label}</h3><div class="divider-orn small"></div>`;
+          menuScroll.appendChild(subSlide);
+          subItems.forEach(dish=> menuScroll.appendChild(renderDishSlide(cat, dish)));
+        });
+      } else {
+        items.forEach(dish=> menuScroll.appendChild(renderDishSlide(cat, dish)));
+      }
+    });
+  }
+
+  // Asegurar que el primer pill esté activo
+  const firstPill = pillsRow.querySelector('.pill');
+  if(firstPill) firstPill.classList.add('active');
 
   /* selector de piezas (uds): solo cambia el precio mostrado, no añade a ningún sitio */
   menuScroll.addEventListener('click', e=>{
@@ -130,10 +154,15 @@ function buildMenu(){
 
     const dishId = row.dataset.dish;
     const dish = itemById(dishId);
+    if(!dish || !dish.porciones) return;
     const cant = pill.dataset.cant;
     const porcion = dish.porciones.find(p=> String(p.cant)===String(cant));
+    if(!porcion) return;
     const slide = row.closest('.dish-slide');
-    slide.querySelector('.dish-price').textContent = fmt(porcion.precio);
+    if(slide){
+      const priceEl = slide.querySelector('.dish-price');
+      if(priceEl) priceEl.textContent = fmt(porcion.precio);
+    }
   });
 }
 
@@ -142,15 +171,20 @@ const io = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       const cat = entry.target.dataset.cat;
+      if(!cat) return;
       pillsRow.querySelectorAll('.pill').forEach(p=>{
-        p.classList.toggle('active', p.dataset.cat === cat);
+        const isMatch = p.dataset.cat === cat;
+        p.classList.toggle('active', isMatch);
+        if(isMatch){
+          p.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
       });
     }
   });
-}, { root:null, threshold:0.55 });
+}, { root: document.getElementById('menu-scroll'), threshold: 0.25 });
 
 function observeSlides(){
-  document.querySelectorAll('.cat-title-slide').forEach(el=>io.observe(el));
+  document.querySelectorAll('.cat-title-slide, .dish-slide').forEach(el=>io.observe(el));
 }
 
 /* =========================================================
