@@ -63,7 +63,8 @@ const MENU = [
   { id:'e4', cat:'entrantes', nombre:'Gyozas de langostino', descripcion:'Empanadillas japonesas a la plancha, relleno de langostino (4 und).', precio:5.50, imagen:'images/gyozaslangostino.webp', alergenos:['gluten','soja','crustaceos'] },
   { id:'e5', cat:'entrantes', nombre:'Samosas', descripcion:'Deliciosos crujientes de hojaldre con relleno de pollo al curry y nuestra mayo buldak miel y toque de sésamo (3 und).', precio:6.50, imagen:'images/samosas.webp', alergenos:['gluten','sesamo','huevo'] },
   { id:'e6', cat:'entrantes', nombre:'Takoyaki', descripcion:'Bolitas de pulpo rebozadas, salsa takoyaki, katsuobushi y hojuelas de bonito (3 und).', precio:4.50, imagen:'images/takoyaki.webp', alergenos:['gluten','huevo','moluscos','pescado'] },
-  ,
+  { id:'e9', cat:'entrantes', nombre:'Pollo Karaage Mango', descripcion:'Pollo rebozado en salsa de mango sweetchili miel y cebolleta finamente cortada.', precio:7.95, imagen:'images/pollokaraagemango.webp', alergenos:['gluten','soja','sesamo'] },
+
 
   // ---------- SUSHI · Nigiri ----------
   { id:'n1', cat:'sushi', sub:'nigiri', nombre:'Nigiri de atún', descripcion:'Atún Rojo Ricardo Fuentes (2und).', precio:6.20, imagen:'images/nigiriatun.webp', alergenos:['pescado'] },
