@@ -78,6 +78,10 @@ function renderDishSlide(cat, dish){
   return slide;
 }
 
+let isUserClicking = false;
+let userClickTimeout = null;
+let currentActiveCat = null;
+
 function buildMenu(){
   // 1. Configurar navegación de las anclas por delegación de eventos en pillsRow
   pillsRow.addEventListener('click', (e)=>{
@@ -87,6 +91,14 @@ function buildMenu(){
     const cat = pill.dataset.cat;
     if(!cat) return;
 
+    isUserClicking = true;
+    clearTimeout(userClickTimeout);
+    userClickTimeout = setTimeout(() => { isUserClicking = false; }, 800);
+
+    currentActiveCat = cat;
+    pillsRow.querySelectorAll('.pill').forEach(p => p.classList.toggle('active', p === pill));
+    pill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
     const target = document.getElementById('cat-title-' + cat);
     if(target){
       const header = document.querySelector('.menu-header');
@@ -94,9 +106,6 @@ function buildMenu(){
       const targetTop = target.offsetTop - headerH;
       menuScroll.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
     }
-
-    pillsRow.querySelectorAll('.pill').forEach(p => p.classList.toggle('active', p === pill));
-    pill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
   });
 
   // 2. Solo generar platos si menuScroll está vacío (no pre-renderizado)
@@ -166,22 +175,22 @@ function buildMenu(){
   });
 }
 
-/* resaltar pill activo según scroll */
+/* resaltar pill activo según scroll (optimizado sin re-animaciones redundantes) */
 const io = new IntersectionObserver((entries)=>{
+  if (isUserClicking) return;
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       const cat = entry.target.dataset.cat;
-      if(!cat) return;
-      pillsRow.querySelectorAll('.pill').forEach(p=>{
-        const isMatch = p.dataset.cat === cat;
-        p.classList.toggle('active', isMatch);
-        if(isMatch){
-          p.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
-      });
+      if(!cat || cat === currentActiveCat) return;
+      currentActiveCat = cat;
+      const targetPill = pillsRow.querySelector(`.pill[data-cat="${cat}"]`);
+      if(targetPill){
+        pillsRow.querySelectorAll('.pill').forEach(p=> p.classList.toggle('active', p === targetPill));
+        targetPill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
     }
   });
-}, { root: document.getElementById('menu-scroll'), threshold: 0.25 });
+}, { root: document.getElementById('menu-scroll'), rootMargin: '-12% 0px -75% 0px', threshold: 0 });
 
 function observeSlides(){
   document.querySelectorAll('.cat-title-slide, .dish-slide').forEach(el=>io.observe(el));
