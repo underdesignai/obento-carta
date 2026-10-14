@@ -50,71 +50,71 @@ const SUSHI_SUBCATEGORIES = [
 
 /* Imagen "de espera" mientras subes tus fotos reales.
    En cuanto tengas las fotos en /images/, esta variable deja de usarse:
-   cada plato ya apunta a su propia ruta images/nombre-del-plato.jpg */
-const PLACEHOLDER_IMG = "images/placeholder.jpg";
+   cada plato ya apunta a su propia ruta images/nombre-del-plato.webp */
+const PLACEHOLDER_IMG = "images/placeholder.webp";
 
 const MENU = [
   // ---------- ENTRANTES ----------
-  { id:'e7', cat:'entrantes', nombre:'Ensalada wakame', descripcion:'Alga wakame marinada en salsa aojiso, salmón y toque de sésamo.', precio:6.90, imagen:'images/ensaladawakame.jpg', alergenos:['sesamo','soja','pescado'] },
-  { id:'e8', cat:'entrantes', nombre:'Ebi Fry', descripcion:'Langostinos empanados crujientes con salsa Sweetchili verde (3und).', precio:5.50, imagen:'images/ebifry.jpg', alergenos:['gluten','crustaceos','huevo'] },
-  { id:'e1', cat:'entrantes', nombre:'Edamame', descripcion:'Vainas de soja salteadas con aceite de humo y toque de shichimi y sal en escamas.', precio:4.50, imagen:'images/edamame.jpg', alergenos:['soja'] },
-  { id:'e2', cat:'entrantes', nombre:'Gyozas de pollo (4und)', descripcion:'Empanadillas japonesas a la plancha, rellenas de pollo.', precio:4.50, imagen:'images/gyozaspollo.jpg', alergenos:['gluten','soja'] },
-  { id:'e3', cat:'entrantes', nombre:'Gyozas de verdura (4 und)', descripcion:'Empanadillas japonesas a la plancha, relleno vegetal.', precio:4.50, imagen:'images/gyozasverdura.jpg', alergenos:['gluten','soja'] },
-  { id:'e4', cat:'entrantes', nombre:'Gyozas de langostino', descripcion:'Empanadillas japonesas a la plancha, relleno de langostino (4 und).', precio:5.50, imagen:'images/gyozaslangostino.jpg', alergenos:['gluten','soja','crustaceos'] },
-  { id:'e5', cat:'entrantes', nombre:'Samosas', descripcion:'Deliciosos crujientes de hojaldre con relleno de pollo al curry y nuestra mayo buldak miel y toque de sésamo (3 und).', precio:6.50, imagen:'images/samosas.jpg', alergenos:['gluten','sesamo','huevo'] },
-  { id:'e6', cat:'entrantes', nombre:'Takoyaki', descripcion:'Bolitas de pulpo rebozadas, salsa takoyaki, katsuobushi y hojuelas de bonito (3 und).', precio:4.50, imagen:'images/takoyaki.jpg', alergenos:['gluten','huevo','moluscos','pescado'] },
+  { id:'e7', cat:'entrantes', nombre:'Ensalada wakame', descripcion:'Alga wakame marinada en salsa aojiso, salmón y toque de sésamo.', precio:6.90, imagen:'images/ensaladawakame.webp', alergenos:['sesamo','soja','pescado'] },
+  { id:'e8', cat:'entrantes', nombre:'Ebi Fry', descripcion:'Langostinos empanados crujientes con salsa Sweetchili verde (3und).', precio:5.50, imagen:'images/ebifry.webp', alergenos:['gluten','crustaceos','huevo'] },
+  { id:'e1', cat:'entrantes', nombre:'Edamame', descripcion:'Vainas de soja salteadas con aceite de humo y toque de shichimi y sal en escamas.', precio:4.50, imagen:'images/edamame.webp', alergenos:['soja'] },
+  { id:'e2', cat:'entrantes', nombre:'Gyozas de pollo (4und)', descripcion:'Empanadillas japonesas a la plancha, rellenas de pollo.', precio:4.50, imagen:'images/gyozaspollo.webp', alergenos:['gluten','soja'] },
+  { id:'e3', cat:'entrantes', nombre:'Gyozas de verdura (4 und)', descripcion:'Empanadillas japonesas a la plancha, relleno vegetal.', precio:4.50, imagen:'images/gyozasverdura.webp', alergenos:['gluten','soja'] },
+  { id:'e4', cat:'entrantes', nombre:'Gyozas de langostino', descripcion:'Empanadillas japonesas a la plancha, relleno de langostino (4 und).', precio:5.50, imagen:'images/gyozaslangostino.webp', alergenos:['gluten','soja','crustaceos'] },
+  { id:'e5', cat:'entrantes', nombre:'Samosas', descripcion:'Deliciosos crujientes de hojaldre con relleno de pollo al curry y nuestra mayo buldak miel y toque de sésamo (3 und).', precio:6.50, imagen:'images/samosas.webp', alergenos:['gluten','sesamo','huevo'] },
+  { id:'e6', cat:'entrantes', nombre:'Takoyaki', descripcion:'Bolitas de pulpo rebozadas, salsa takoyaki, katsuobushi y hojuelas de bonito (3 und).', precio:4.50, imagen:'images/takoyaki.webp', alergenos:['gluten','huevo','moluscos','pescado'] },
   ,
 
   // ---------- SUSHI · Nigiri ----------
-  { id:'n1', cat:'sushi', sub:'nigiri', nombre:'Nigiri de atún', descripcion:'Atún Rojo Ricardo Fuentes (2und).', precio:6.20, imagen:'images/nigiriatun.jpg', alergenos:['pescado'] },
-  { id:'n2', cat:'sushi', sub:'nigiri', nombre:'Nigiri de atún con foie', descripcion:'Atún Rojo coronado con foie, sal marinada y punto de teriyaki (2und).', precio:7.80, imagen:'images/nigiriatunfoie.jpg', alergenos:['pescado','soja'] },
-  { id:'n3', cat:'sushi', sub:'nigiri', nombre:'Nigiri de salmón', descripcion:'Salmón (2und).', precio:5.50, imagen:'images/nigirisalmon.jpg', alergenos:['pescado'] },
-  { id:'n4', cat:'sushi', sub:'nigiri', nombre:'Nigiri de salmón flambeado', descripcion:'Salmón sellado al soplete, con salsa kimchi y azúcar moreno (2und).', precio:6.20, imagen:'images/nigirisalmonf.jpg', alergenos:['pescado'] },
-  { id:'n5', cat:'sushi', sub:'nigiri', nombre:'Nigiri de chutoro', descripcion:'Atún sellado al soplete, toque de sal en escamas, pimienta negra y cebolleta (2und).', precio:10.50, imagen:'images/nigirichutoro.jpg', alergenos:['pescado'] },
-  { id:'n6', cat:'sushi', sub:'nigiri', nombre:'Nigiri de vieira', descripcion:'Vieira sellada con soplete, mayo kimchi, sal en escamas, shichimi y toque de lima (2und).', precio:9.90, imagen:'images/nigirivieira.jpg', alergenos:['moluscos','huevo'] },
-  { id:'n7', cat:'sushi', sub:'nigiri', nombre:'Nigiri de anguila', descripcion:'Anguila glaseada en salsa teriyaki y toque de cebolleta finamente cortada (2und).', precio:7.20, imagen:'images/nigirianguila.jpg', alergenos:['pescado','soja'] },
-  { id:'n8', cat:'sushi', sub:'nigiri', nombre:'Nigiri de hamachi', descripcion:'Pez limón (hamachi) (2und).', precio:8.90, imagen:'images/nigirihamachi.jpg', alergenos:['pescado'] },
-  { id:'n9', cat:'sushi', sub:'nigiri', nombre:'Nigiri de atún toro con trufa', descripcion:'Mayo trufada, cebolleta finamente cortada y atún toro rojo (2und).', precio:10.90, imagen:'images/atuntoro.jpg', alergenos:['pescado','huevo'] },
+  { id:'n1', cat:'sushi', sub:'nigiri', nombre:'Nigiri de atún', descripcion:'Atún Rojo Ricardo Fuentes (2und).', precio:6.20, imagen:'images/nigiriatun.webp', alergenos:['pescado'] },
+  { id:'n2', cat:'sushi', sub:'nigiri', nombre:'Nigiri de atún con foie', descripcion:'Atún Rojo coronado con foie, sal marinada y punto de teriyaki (2und).', precio:7.80, imagen:'images/nigiriatunfoie.webp', alergenos:['pescado','soja'] },
+  { id:'n3', cat:'sushi', sub:'nigiri', nombre:'Nigiri de salmón', descripcion:'Salmón (2und).', precio:5.50, imagen:'images/nigirisalmon.webp', alergenos:['pescado'] },
+  { id:'n4', cat:'sushi', sub:'nigiri', nombre:'Nigiri de salmón flambeado', descripcion:'Salmón sellado al soplete, con salsa kimchi y azúcar moreno (2und).', precio:6.20, imagen:'images/nigirisalmonf.webp', alergenos:['pescado'] },
+  { id:'n5', cat:'sushi', sub:'nigiri', nombre:'Nigiri de chutoro', descripcion:'Atún sellado al soplete, toque de sal en escamas, pimienta negra y cebolleta (2und).', precio:10.50, imagen:'images/nigirichutoro.webp', alergenos:['pescado'] },
+  { id:'n6', cat:'sushi', sub:'nigiri', nombre:'Nigiri de vieira', descripcion:'Vieira sellada con soplete, mayo kimchi, sal en escamas, shichimi y toque de lima (2und).', precio:9.90, imagen:'images/nigirivieira.webp', alergenos:['moluscos','huevo'] },
+  { id:'n7', cat:'sushi', sub:'nigiri', nombre:'Nigiri de anguila', descripcion:'Anguila glaseada en salsa teriyaki y toque de cebolleta finamente cortada (2und).', precio:7.20, imagen:'images/nigirianguila.webp', alergenos:['pescado','soja'] },
+  { id:'n8', cat:'sushi', sub:'nigiri', nombre:'Nigiri de hamachi', descripcion:'Pez limón (hamachi) (2und).', precio:8.90, imagen:'images/nigirihamachi.webp', alergenos:['pescado'] },
+  { id:'n9', cat:'sushi', sub:'nigiri', nombre:'Nigiri de atún toro con trufa', descripcion:'Mayo trufada, cebolleta finamente cortada y atún toro rojo (2und).', precio:10.90, imagen:'images/atuntoro.webp', alergenos:['pescado','huevo'] },
 
   // ---------- SUSHI · Uramaki ----------
-  { id:'u1', cat:'sushi', sub:'uramaki', nombre:'Jōnetsu Tuna', descripcion:'Arroz con sésamo kimchi. Queso crema, aguacate, cebollino y pepino holandés con cobertura de atún, foie flambeado con punto de teriyaki. (8 uds)', precio:14.20, imagen:'images/rolloatun.jpg', alergenos:['pescado','lacteos','sesamo','soja'] },
-  { id:'u2', cat:'sushi', sub:'uramaki', nombre:'Sakura Roll', descripcion:'Queso crema, aguacate, cebollino y pepino holandés con cobertura de salmón flambeado, acabado con mayo kimchi y punto de teriyaki. (8 uds)', precio:12.50, imagen:'images/uramakisalmon.jpg', alergenos:['pescado','lacteos','huevo','soja'] },
-  { id:'u3', cat:'sushi', sub:'uramaki', nombre:'Chicken roll', descripcion:'Pollo karaage, queso crema, cebollino, cobertura de aguacate y nuestra salsa acebichada (8 uds).', porciones:[{cant:8, precio:11.50}], imagen:'images/uramakipollo.jpg', alergenos:['gluten','soja','huevo','lacteos'] },
-  { id:'u4', cat:'sushi', sub:'uramaki', nombre:'Aurora Roll (Vegetal)', descripcion:'Uramaki de micro mezclum, pepino y mango, guacamole trufado, punto de salsa Aojiso y coronado con cebolleta finamente cortada. (8 uds)', precio:10.50, imagen:'images/rollovegetal.jpg', alergenos:['soja'] },
-  { id:'u5', cat:'sushi', sub:'uramaki', nombre:'Black Dragon', descripcion:'Espárrago, cebollino, gamba tempurizada, cobertura de atún, mayo buldak miel, decorado con boniato crujiente.', porciones:[{cant:8, precio:15.20}], imagen:'images/rolloblack.jpg', alergenos:['pescado','soja','crustaceos','gluten','huevo'] },
-  { id:'u6', cat:'sushi', sub:'uramaki', nombre:'Shinigami crab', descripcion:'Arroz negro, brotes de soja, mango, cangrejo real, cobertura de lubina y salsa spicy mango.', porciones:[{cant:8, precio:11.50}], imagen:'images/uramakicangrejo.jpg', alergenos:['crustaceos','huevo','pescado','soja'] },
-  { id:'u7', cat:'sushi', sub:'uramaki', nombre:'Rollo Tartar de salmón', descripcion:'Aguacate, queso crema, cebollino y pepino, con tartar de salmón y salsa Aojiso.', porciones:[{cant:8, precio:11.30}], imagen:'images/rollosalmon1.jpg', alergenos:['pescado','lacteos','soja'] },
-  { id:'u8', cat:'sushi', sub:'uramaki', nombre:'Rollo Tartar de atún', descripcion:'Aguacate, queso crema, cebollino y pepino, con tartar de atún y mayo kimchi.', porciones:[{cant:8, precio:13.80}], imagen:'images/rolloatun1.jpg', alergenos:['pescado','lacteos','huevo','soja'] },
-  { id:'u9', cat:'sushi', sub:'uramaki', nombre:'Rollo Tartar de lubina', descripcion:'Aguacate, queso crema, cebollino y pepino, con tartar de lubina y salsa acebichada.', porciones:[{cant:8, precio:11.90}], imagen:'images/rollolubina.jpg', alergenos:['pescado','lacteos'] },
+  { id:'u1', cat:'sushi', sub:'uramaki', nombre:'Jōnetsu Tuna', descripcion:'Arroz con sésamo kimchi. Queso crema, aguacate, cebollino y pepino holandés con cobertura de atún, foie flambeado con punto de teriyaki. (8 uds)', precio:14.20, imagen:'images/rolloatun.webp', alergenos:['pescado','lacteos','sesamo','soja'] },
+  { id:'u2', cat:'sushi', sub:'uramaki', nombre:'Sakura Roll', descripcion:'Queso crema, aguacate, cebollino y pepino holandés con cobertura de salmón flambeado, acabado con mayo kimchi y punto de teriyaki. (8 uds)', precio:12.50, imagen:'images/uramakisalmon.webp', alergenos:['pescado','lacteos','huevo','soja'] },
+  { id:'u3', cat:'sushi', sub:'uramaki', nombre:'Chicken roll', descripcion:'Pollo karaage, queso crema, cebollino, cobertura de aguacate y nuestra salsa acebichada (8 uds).', porciones:[{cant:8, precio:11.50}], imagen:'images/uramakipollo.webp', alergenos:['gluten','soja','huevo','lacteos'] },
+  { id:'u4', cat:'sushi', sub:'uramaki', nombre:'Aurora Roll (Vegetal)', descripcion:'Uramaki de micro mezclum, pepino y mango, guacamole trufado, punto de salsa Aojiso y coronado con cebolleta finamente cortada. (8 uds)', precio:10.50, imagen:'images/rollovegetal.webp', alergenos:['soja'] },
+  { id:'u5', cat:'sushi', sub:'uramaki', nombre:'Black Dragon', descripcion:'Espárrago, cebollino, gamba tempurizada, cobertura de atún, mayo buldak miel, decorado con boniato crujiente.', porciones:[{cant:8, precio:15.20}], imagen:'images/rolloblack.webp', alergenos:['pescado','soja','crustaceos','gluten','huevo'] },
+  { id:'u6', cat:'sushi', sub:'uramaki', nombre:'Shinigami crab', descripcion:'Arroz negro, brotes de soja, mango, cangrejo real, cobertura de lubina y salsa spicy mango.', porciones:[{cant:8, precio:11.50}], imagen:'images/uramakicangrejo.webp', alergenos:['crustaceos','huevo','pescado','soja'] },
+  { id:'u7', cat:'sushi', sub:'uramaki', nombre:'Rollo Tartar de salmón', descripcion:'Aguacate, queso crema, cebollino y pepino, con tartar de salmón y salsa Aojiso.', porciones:[{cant:8, precio:11.30}], imagen:'images/rollosalmon1.webp', alergenos:['pescado','lacteos','soja'] },
+  { id:'u8', cat:'sushi', sub:'uramaki', nombre:'Rollo Tartar de atún', descripcion:'Aguacate, queso crema, cebollino y pepino, con tartar de atún y mayo kimchi.', porciones:[{cant:8, precio:13.80}], imagen:'images/rolloatun1.webp', alergenos:['pescado','lacteos','huevo','soja'] },
+  { id:'u9', cat:'sushi', sub:'uramaki', nombre:'Rollo Tartar de lubina', descripcion:'Aguacate, queso crema, cebollino y pepino, con tartar de lubina y salsa acebichada.', porciones:[{cant:8, precio:11.90}], imagen:'images/rollolubina.webp', alergenos:['pescado','lacteos'] },
 
   // ---------- SUSHI · Futomaki ----------
-  { id:'f1', cat:'sushi', sub:'futomaki', nombre:'Futomaki de salmón', descripcion:'Relleno de salmón, queso crema y salsa aojiso (8 und).', precio:9.90, imagen:'images/futomaki.jpg', alergenos:['pescado','lacteos','soja'] },
-  { id:'f2', cat:'sushi', sub:'futomaki', nombre:'Futomaki de gamba trufada', descripcion:'Gamba en tempura, ikura, cebollino y mayonesa trufada (12 und).', precio:12.20, imagen:'images/rollogamba.jpg', alergenos:['crustaceos','soja','gluten','huevo','pescado'] },
-  { id:'f3', cat:'sushi', sub:'futomaki', nombre:'Futomaki karaage', descripcion:'Relleno de pollo karaage rebozado, mango, acompañado de mayo buldak miel (12 und).', precio:10.50, imagen:'images/futokara.jpg', alergenos:['soja','gluten','huevo'] },
+  { id:'f1', cat:'sushi', sub:'futomaki', nombre:'Futomaki de salmón', descripcion:'Relleno de salmón, queso crema y salsa aojiso (8 und).', precio:9.90, imagen:'images/futomaki.webp', alergenos:['pescado','lacteos','soja'] },
+  { id:'f2', cat:'sushi', sub:'futomaki', nombre:'Futomaki de gamba trufada', descripcion:'Gamba en tempura, ikura, cebollino y mayonesa trufada (12 und).', precio:12.20, imagen:'images/rollogamba.webp', alergenos:['crustaceos','soja','gluten','huevo','pescado'] },
+  { id:'f3', cat:'sushi', sub:'futomaki', nombre:'Futomaki karaage', descripcion:'Relleno de pollo karaage rebozado, mango, acompañado de mayo buldak miel (12 und).', precio:10.50, imagen:'images/futokara.webp', alergenos:['soja','gluten','huevo'] },
 
   // ---------- SUSHI · Maki ----------
-  { id:'m1', cat:'sushi', sub:'maki', nombre:'Maki de salmón', descripcion:'Salmón (8 und).', precio:6.20, imagen:'images/maki2.jpg', alergenos:['pescado'] },
-  { id:'m2', cat:'sushi', sub:'maki', nombre:'Maki de chutoro', descripcion:'Ventresca de atún rojo Ricardo Fuentes (8 und).', precio:10.50, imagen:'images/makichu.jpg', alergenos:['pescado'] },
-  { id:'m3', cat:'sushi', sub:'maki', nombre:'Maki de atún', descripcion:'Atún fresco (8 und).', precio:7.20, imagen:'images/makiatun.jpg', alergenos:['pescado'] },
-  { id:'m4', cat:'sushi', sub:'maki', nombre:'Maki de aguacate', descripcion:'Aguacate (8 und).', precio:5.20, imagen:'images/maki4.jpg', alergenos:[] },
+  { id:'m1', cat:'sushi', sub:'maki', nombre:'Maki de salmón', descripcion:'Salmón (8 und).', precio:6.20, imagen:'images/maki2.webp', alergenos:['pescado'] },
+  { id:'m2', cat:'sushi', sub:'maki', nombre:'Maki de chutoro', descripcion:'Ventresca de atún rojo Ricardo Fuentes (8 und).', precio:10.50, imagen:'images/makichu.webp', alergenos:['pescado'] },
+  { id:'m3', cat:'sushi', sub:'maki', nombre:'Maki de atún', descripcion:'Atún fresco (8 und).', precio:7.20, imagen:'images/makiatun.webp', alergenos:['pescado'] },
+  { id:'m4', cat:'sushi', sub:'maki', nombre:'Maki de aguacate', descripcion:'Aguacate (8 und).', precio:5.20, imagen:'images/maki4.webp', alergenos:[] },
 
   // ---------- CALIENTES ----------
-  { id:'c3', cat:'calientes', nombre:'Arroz con ternera', descripcion:'Arroz salteado con ternera, zanahoria, pimiento verde, pimiento rojo, cebolla, espárrago y pepino.', precio:12.50, imagen:'images/arrozternera.jpg', alergenos:['soja'] },
-  { id:'c4', cat:'calientes', nombre:'Arroz con pollo', descripcion:'Arroz salteado con pollo, zanahoria, pimiento verde, pimiento rojo, cebolla, espárrago y pepino.', precio:11.20, imagen:'images/arrozpollo.jpg', alergenos:['soja'] },
-  { id:'c5', cat:'calientes', nombre:'Yakisoba de langostino', descripcion:'Fideos salteados con langostino, col, aceite de sésamo, pepino y soja.', precio:13.20, imagen:'images/yakisobalangostino.jpg', alergenos:['gluten','crustaceos','soja','sesamo'],
+  { id:'c3', cat:'calientes', nombre:'Arroz con ternera', descripcion:'Arroz salteado con ternera, zanahoria, pimiento verde, pimiento rojo, cebolla, espárrago y pepino.', precio:12.50, imagen:'images/arrozternera.webp', alergenos:['soja'] },
+  { id:'c4', cat:'calientes', nombre:'Arroz con pollo', descripcion:'Arroz salteado con pollo, zanahoria, pimiento verde, pimiento rojo, cebolla, espárrago y pepino.', precio:11.20, imagen:'images/arrozpollo.webp', alergenos:['soja'] },
+  { id:'c5', cat:'calientes', nombre:'Yakisoba de langostino', descripcion:'Fideos salteados con langostino, col, aceite de sésamo, pepino y soja.', precio:13.20, imagen:'images/yakisobalangostino.webp', alergenos:['gluten','crustaceos','soja','sesamo'],
     opciones:[ { id:'trigo', label:'Fideos de trigo' }, { id:'arroz', label:'Fideos de arroz (sin gluten)' } ] },
-  { id:'c6', cat:'calientes', nombre:'Yakisoba de ternera', descripcion:'Fideos salteados con ternera, col, aceite de sésamo, pepino y soja.', precio:12.90, imagen:'images/yakisobaternera.jpg', alergenos:['gluten','soja','sesamo'],
+  { id:'c6', cat:'calientes', nombre:'Yakisoba de ternera', descripcion:'Fideos salteados con ternera, col, aceite de sésamo, pepino y soja.', precio:12.90, imagen:'images/yakisobaternera.webp', alergenos:['gluten','soja','sesamo'],
     opciones:[ { id:'trigo', label:'Fideos de trigo' }, { id:'arroz', label:'Fideos de arroz (sin gluten)' } ] },
-  { id:'c7', cat:'calientes', nombre:'Yakisoba de pollo', descripcion:'Fideos salteados con pollo, col, aceite de sésamo, pepino y soja.', precio:11.90, imagen:'images/yakisobapollo.jpg', alergenos:['gluten','soja','sesamo'],
+  { id:'c7', cat:'calientes', nombre:'Yakisoba de pollo', descripcion:'Fideos salteados con pollo, col, aceite de sésamo, pepino y soja.', precio:11.90, imagen:'images/yakisobapollo.webp', alergenos:['gluten','soja','sesamo'],
     opciones:[ { id:'trigo', label:'Fideos de trigo' }, { id:'arroz', label:'Fideos de arroz (sin gluten)' } ] },
 
   // ---------- POSTRES ----------
   // Me dijiste que solo tienes 3 tipos de mochi: he puesto sabores habituales
   // como ejemplo. Cambia el "nombre" y el "precio" por los tuyos reales,
   // y sube la foto de cada uno con el nombre exacto del campo "imagen".
-  { id:'p1', cat:'postres', nombre:'Mochi de tarta de queso', descripcion:'Masa de arroz con helado de tarta de queso.', precio:4.50, imagen:'images/mochifresa.jpg', alergenos:['lacteos'] },
-  { id:'p2', cat:'postres', nombre:'Mochi de mango', descripcion:'Masa de arroz de Fruta de la pasión relleno de helado de mango.', precio:4.50, imagen:'images/mochimango.jpg', alergenos:['lacteos'] },
-  { id:'p3', cat:'postres', nombre:'Mochi de chocolate', descripcion:'Masa de arroz relleno de helado de chocolate.', precio:4.50, imagen:'images/mochichocolate.jpg', alergenos:['lacteos'] },
+  { id:'p1', cat:'postres', nombre:'Mochi de tarta de queso', descripcion:'Masa de arroz con helado de tarta de queso.', precio:4.50, imagen:'images/mochifresa.webp', alergenos:['lacteos'] },
+  { id:'p2', cat:'postres', nombre:'Mochi de mango', descripcion:'Masa de arroz de Fruta de la pasión relleno de helado de mango.', precio:4.50, imagen:'images/mochimango.webp', alergenos:['lacteos'] },
+  { id:'p3', cat:'postres', nombre:'Mochi de chocolate', descripcion:'Masa de arroz relleno de helado de chocolate.', precio:4.50, imagen:'images/mochichocolate.webp', alergenos:['lacteos'] },
 ];
 
 const BEBIDAS = [
